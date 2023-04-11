@@ -13,3 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function displayToys() {
+  fetch(`http://localhost:3000/toys`)
+  .then(response => response.json())
+  .then(data => {
+    
+  })
+}
+
+const card = document.getElementsByClassName('container')
