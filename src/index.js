@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toyFormContainer.style.display = "none";
     }
   });
+  fetchToys();
 });
 
 function fetchToys() {
@@ -21,7 +22,7 @@ function fetchToys() {
 }
 
 function renderToys(toys) {
-  const card = document.querySelector('.container');
+  const card = document.querySelector('#toy-collection');
   toys.forEach(toy => {
     const div = document.createElement('div');
     div.className = 'card';
@@ -34,7 +35,7 @@ function renderToys(toys) {
     const p = document.createElement('p');
     p.textContent = `${toy.likes} likes`;
     const button = document.createElement('button');
-    button.textContent = 'Like';
+    button.textContent = 'Like  👍🏻';
     button.className = 'like-btn';
     button.id = toy.id;
     div.append(h2, img, p, button);
